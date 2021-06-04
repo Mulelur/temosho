@@ -28,7 +28,7 @@ export default function AboutMeContainer() {
           <AboutMe.Text>
             in future i would like to see my self being a well known
             professional mechanical engineer having my own company. as a child
-            of god i believe he will help me for fill my dream.
+            of god i believe he will help me fulfil my dream.
           </AboutMe.Text>
         </AboutMe.Column>
       </AboutMe.Container>

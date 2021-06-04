@@ -20,7 +20,7 @@ export default function ExpertiseContainer() {
           I also like to commit myselt with my school work.
         </Expertise.Text>
       </Expertise.Content>
-      <Expertise.MMTitle>Manegment Matrix</Expertise.MMTitle>
+      <Expertise.MMTitle>Management Matrix</Expertise.MMTitle>
       <Expertise.MM>
         {MMData.map((item) => {
           return (
