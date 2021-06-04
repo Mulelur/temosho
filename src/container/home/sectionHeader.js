@@ -8,7 +8,8 @@ export default function SectionHeaderContainer() {
       <SectionHeader.Container>
         <SectionHeader.Heading4>Welcome to my website!</SectionHeader.Heading4>
         <SectionHeader.Heading1>
-          greetings, I am Mokgokoloshi Temosho a future mechanical engineer
+          greetings, I am Mokgokoloshi Temosho Sekgwari Mokgokoloshi a future
+          mechanical engineer
         </SectionHeader.Heading1>
         <SectionHeader.Text>
           Productivity is never an accident. It’s always the result of a
