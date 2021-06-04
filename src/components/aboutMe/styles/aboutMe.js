@@ -21,6 +21,7 @@ export const Image = styled.img`
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
+  object-fit: cover;
   //   max-width: 100%;
   height: 32rem;
   width: 45rem;
