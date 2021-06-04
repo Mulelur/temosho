@@ -15,7 +15,7 @@ export default function AboutMeContainer() {
         <AboutMe.Column>
           <AboutMe.Heading2>About Me</AboutMe.Heading2>
           <AboutMe.Heading4>
-            Hello! My Name is Sekgwari Tomosho.
+            Hello! My Name is Sekgwari Temosho.
           </AboutMe.Heading4>
           <AboutMe.Text>
             I am doing mechanical engineering which is the course i desire the
