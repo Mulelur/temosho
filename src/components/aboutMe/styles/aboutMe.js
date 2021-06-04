@@ -21,12 +21,12 @@ export const Image = styled.img`
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
-  object-fit: cover;
   //   max-width: 100%;
   height: 32rem;
   width: 45rem;
   @media (max-width: 876px) {
     width: 100%;
+    height: 100%;
   }
 `;
 
@@ -58,7 +58,9 @@ export const Text = styled.p`
 `;
 
 export const Buttons = styled.div`
-  margin: 0 10rem;
   margin-bottom: 5rem;
-  padding: none;
+  @media (max-width: 400px) {
+    margin: 2%;
+    margin-bottom: 5%;
+  }
 `;
