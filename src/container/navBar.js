@@ -5,22 +5,62 @@ import { MenuIcon } from "../icons/icons";
 
 export default function NavBarContainer() {
   const [toggel, setToggel] = useState(false);
+  const [toggelMenu, setToggelMenu] = useState(false);
   return (
     <NavBar>
       <NavBar.Container>
-        <NavBar.Link>
-          {/* <NavBar.Image  /> */}
-          <NavBar.Logo>Tomosho</NavBar.Logo>
-        </NavBar.Link>
-        <NavBar.Menu>
+        <NavBar.NavLink>
+          <NavBar.Logo>Temosho</NavBar.Logo>
+        </NavBar.NavLink>
+        <NavBar.Menu
+          onClick={(e) => {
+            setToggelMenu(!toggelMenu);
+          }}
+        >
           <MenuIcon />
         </NavBar.Menu>
+        {toggelMenu && (
+          <NavBar.DropDown>
+            {NavData.map((item) => {
+              return (
+                !item.type && (
+                  <NavBar.ListItem>
+                    <NavBar.NavLink to={item.path}>{item.title}</NavBar.NavLink>
+                  </NavBar.ListItem>
+                )
+              );
+            })}
+            <NavBar.ListItem
+              onClick={(e) => {
+                setToggel(!toggel);
+              }}
+            >
+              More
+            </NavBar.ListItem>
+            {toggel && (
+              <NavBar.DropDown>
+                {NavData.map((item) => {
+                  return (
+                    item.type === "more" && (
+                      <NavBar.ListItem>
+                        <NavBar.NavLink to={item.path}>
+                          {item.title}
+                        </NavBar.NavLink>
+                      </NavBar.ListItem>
+                    )
+                  );
+                })}
+              </NavBar.DropDown>
+            )}
+          </NavBar.DropDown>
+        )}
+
         <NavBar.List>
           {NavData.map((item) => {
             return (
               !item.type && (
                 <NavBar.ListItem>
-                  <NavBar.Link href={item.path}>{item.title}</NavBar.Link>
+                  <NavBar.NavLink to={item.path}>{item.title}</NavBar.NavLink>
                 </NavBar.ListItem>
               )
             );
@@ -38,7 +78,9 @@ export default function NavBarContainer() {
                 return (
                   item.type === "more" && (
                     <NavBar.ListItem>
-                      <NavBar.Link href={item.path}>{item.title}</NavBar.Link>
+                      <NavBar.NavLink to={item.path}>
+                        {item.title}
+                      </NavBar.NavLink>
                     </NavBar.ListItem>
                   )
                 );

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as ReachRouterLink } from "react-router-dom";
 import { primaryColor, textColor } from "../../../colors/colors";
 
 export const Container = styled.div`
@@ -20,7 +21,7 @@ export const Nav = styled.nav`
   transition: all 0.5s ease-in-out;
 `;
 
-export const Link = styled.a`
+export const NavLink = styled(ReachRouterLink)`
   color: inherit;
   text-decoration: none;
   font-size: 1.5rem;
