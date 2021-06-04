@@ -8,6 +8,11 @@ import {
   MMContent,
   MMText,
   MMTitle,
+  Title,
+  Subjects,
+  List,
+  ListItem,
+  Group,
 } from "./styles/expertise";
 
 export default function Expertise({ children, ...restProps }) {
@@ -40,4 +45,23 @@ Expertise.MMText = function ExpertiseMMText({ children, ...restProps }) {
 
 Expertise.MMTitle = function ExpertiseMMTitle({ children, ...restProps }) {
   return <MMTitle {...restProps}>{children}</MMTitle>;
+};
+Expertise.Title = function ExpertiseTitle({ children, ...restProps }) {
+  return <Title>{children}</Title>;
+};
+
+Expertise.List = function ExpertiseList({ children, ...restProps }) {
+  return <List>{children}</List>;
+};
+
+Expertise.ListItem = function ExpertiseListItem({ children, ...restProps }) {
+  return <ListItem>{children}</ListItem>;
+};
+
+Expertise.Subjects = function ExpertiseSubjects({ children, ...restProps }) {
+  return <Subjects>{children}</Subjects>;
+};
+
+Expertise.Group = function ExpertiseGruop({ children }) {
+  return <Group>{children}</Group>;
 };
